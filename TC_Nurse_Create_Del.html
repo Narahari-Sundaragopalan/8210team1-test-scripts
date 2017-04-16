@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://county-bedtracking-system.herokuapp.com/" />
+<title>TCUPDATEPATIENTDETAILASADMIN</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TCUPDATEPATIENTDETAILASADMIN</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>ssinghparihar@unomaha.edu</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>secret</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Manage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Patients</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=create-patient</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=patient_first_name</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=patient_last_name</td>
+	<td>testing</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=datepicker1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=14</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=admit_time</td>
+	<td>09:30</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=patient_condition</td>
+	<td>Critical</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=age</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=gender</td>
+	<td>label=Male</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=date_of_birth</td>
+	<td>09/03/2005</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=department</td>
+	<td>label=Critical Care</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=next_of_kin</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=next_of_kin_contact</td>
+	<td>890-890-8900</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=next_of_kin_relation</td>
+	<td>Brother</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=patient_deposition_condition</td>
+	<td>Critical</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=room_no</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=patient_injury</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=test testing</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to delete?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Shivani</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
