@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://county-bedtracking-system.herokuapp.com/" />
+<title>TC_CreateAndDeletePatientDetailAsAdmin</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">TC_CreateAndDeletePatientDetailAsAdmin</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>hbtsadmin@unomaha.edu</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>secret</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>Welcome Administrator</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Administration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Patients</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=create-patient</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=patient_first_name</td>
+	<td>Sheen</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=patient_last_name</td>
+	<td>Parihar</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=patient_last_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=datepicker1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=admit_time</td>
+	<td>09:00</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=patient_condition</td>
+	<td>Burns</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=age</td>
+	<td>35</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=gender</td>
+	<td>label=Female</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=date_of_birth</td>
+	<td>10/10/1991</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=department</td>
+	<td>label=Pediatric Unit</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=next_of_kin</td>
+	<td>Naru</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=next_of_kin_contact</td>
+	<td>402-800-0909</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=next_of_kin_relation</td>
+	<td>Friend</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=patient_deposition_condition</td>
+	<td>Alive</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=room_no</td>
+	<td>212</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=patient_injury</td>
+	<td>Burns around elbow</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>Sheen</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>Patients</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sheen Parihar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>Update Patient</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to delete?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td></td>
+	<td>Patients</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Administrator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
