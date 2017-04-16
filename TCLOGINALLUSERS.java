@@ -1,11 +1,11 @@
-package com.example.tests;
-
+package County_Health_System_Test;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -17,7 +17,8 @@ public class TCLOGINALLUSERS {
 
   @Before
   public void setUp() throws Exception {
-    driver = new FirefoxDriver();
+	System.setProperty("webdriver.chrome.driver", "/Users/naru/Downloads/chromedriver");
+    driver = new ChromeDriver();
     baseUrl = "http://county-bedtracking-system.herokuapp.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }

@@ -1,4 +1,5 @@
-package com.example.tests;
+package County_Health_System_Test;
+
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -17,6 +18,7 @@ public class TCCHECKEMERGENCYFIRSTRESPONDER {
 
   @Before
   public void setUp() throws Exception {
+	System.setProperty("webdriver.gecko.driver", "/Users/naru/Downloads/geckodriver");  
     driver = new FirefoxDriver();
     baseUrl = "http://county-bedtracking-system.herokuapp.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
