@@ -1,4 +1,4 @@
-package com.example.tests;
+package county_bed_tracking_systemTest;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -6,6 +6,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -17,7 +18,8 @@ public class TCCheckCreateAndDeletePatientAsAdmin {
 
   @Before
   public void setUp() throws Exception {
-    driver = new FirefoxDriver();
+	System.setProperty("webdriver.chrome.driver", "/Users/shivanisingh/Downloads/chromedriver");
+    driver = new ChromeDriver();
     baseUrl = "https://county-bedtracking-system.herokuapp.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }

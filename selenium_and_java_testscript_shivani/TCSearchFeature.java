@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class TCCheckValidationForMissingFirstName {
+public class TCSearchFeature {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -19,13 +19,13 @@ public class TCCheckValidationForMissingFirstName {
   @Before
   public void setUp() throws Exception {
 	System.setProperty("webdriver.chrome.driver", "/Users/shivanisingh/Downloads/chromedriver");
-	driver = new ChromeDriver();
+    driver = new ChromeDriver();
     baseUrl = "http://county-bedtracking-system.herokuapp.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
-  public void testTCCheckValidationForMissingFirstName() throws Exception {
+  public void testTCSearchFeature() throws Exception {
     driver.get(baseUrl + "/");
     driver.findElement(By.linkText("Login")).click();
     driver.findElement(By.id("email")).clear();
@@ -35,40 +35,13 @@ public class TCCheckValidationForMissingFirstName {
     driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
     driver.findElement(By.linkText("Administration")).click();
     driver.findElement(By.linkText("Patients")).click();
-    driver.findElement(By.id("create-patient")).click();
-    driver.findElement(By.id("patient_last_name")).clear();
-    driver.findElement(By.id("patient_last_name")).sendKeys("Damon");
-    driver.findElement(By.id("datepicker1")).click();
-    driver.findElement(By.linkText("15")).click();
-    driver.findElement(By.id("admit_time")).clear();
-    driver.findElement(By.id("admit_time")).sendKeys("10:00");
-    driver.findElement(By.id("patient_condition")).clear();
-    driver.findElement(By.id("patient_condition")).sendKeys("Serious");
-    driver.findElement(By.id("age")).clear();
-    driver.findElement(By.id("age")).sendKeys("50");
-    new Select(driver.findElement(By.name("gender"))).selectByVisibleText("Male");
-    driver.findElement(By.id("date_of_birth")).clear();
-    driver.findElement(By.id("date_of_birth")).sendKeys("01/01/1967");
-    new Select(driver.findElement(By.id("department"))).selectByVisibleText("Burn Ward");
-    new Select(driver.findElement(By.id("department"))).selectByVisibleText("Critical Care");
-    driver.findElement(By.id("next_of_kin")).clear();
-    driver.findElement(By.id("next_of_kin")).sendKeys("Siri");
-    driver.findElement(By.id("next_of_kin_contact")).clear();
-    driver.findElement(By.id("next_of_kin_contact")).sendKeys("402-011-7777");
-    driver.findElement(By.id("next_of_kin_relation")).clear();
-    driver.findElement(By.id("next_of_kin_relation")).sendKeys("Sister");
-    driver.findElement(By.id("patient_deposition_condition")).clear();
-    driver.findElement(By.id("patient_deposition_condition")).sendKeys("Alive");
-    driver.findElement(By.id("room_no")).clear();
-    driver.findElement(By.id("room_no")).sendKeys("111");
-    driver.findElement(By.id("patient_injury")).clear();
-    driver.findElement(By.id("patient_injury")).sendKeys("heart attack");
-    driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
     // Warning: assertTextPresent may require manual changes
     assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*$"));
-    driver.findElement(By.id("patient_first_name")).clear();
-    driver.findElement(By.id("patient_first_name")).sendKeys("Sam");
-    driver.findElement(By.cssSelector("button.btn.btn-primary")).click();
+    driver.findElement(By.cssSelector("input.form-control.input-sm")).clear();
+    driver.findElement(By.cssSelector("input.form-control.input-sm")).sendKeys("smith");
+    // Warning: assertTextPresent may require manual changes
+    assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*$"));
+    driver.findElement(By.linkText("John Smith")).click();
     driver.findElement(By.linkText("Administrator")).click();
     driver.findElement(By.linkText("Logout")).click();
   }
