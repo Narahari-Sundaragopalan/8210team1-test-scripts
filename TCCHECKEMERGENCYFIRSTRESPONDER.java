@@ -18,8 +18,8 @@ public class TCCHECKEMERGENCYFIRSTRESPONDER {
 
   @Before
   public void setUp() throws Exception {
-	System.setProperty("webdriver.gecko.driver", "/Users/naru/Downloads/geckodriver");  
-    driver = new FirefoxDriver();
+	System.setProperty("webdriver.chrome.driver", "/Users/naru/Downloads/chromedriver");  
+    driver = new ChromeDriver();
     baseUrl = "http://county-bedtracking-system.herokuapp.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
